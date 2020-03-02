@@ -1,0 +1,82 @@
+<section class="section">
+  <div class="row">
+    <div class="col-11 col-sm-6 mx-auto">
+      {{> messages }}
+    </div>
+  </div>
+
+
+  <div class="row m-0 px-3 p-md-0">
+
+    <div class="col-12 col-md-11 col-xl-12 rounded white-text mx-auto text-center bg-success z-depth-1">
+      <h3 class="h3">Las 5 favoritas de todo el mundo <i class="fas fa-play"></i></h3>
+      <small>(de todos los que publicaron ajaj)</small>
+    </div>
+
+
+    {{#each posts}}
+
+
+    <div class="col-12 col-sm-5 col-md-3 col-xl-2 mx-auto bg-white p-2 my-3 rounded z-depth-1">
+      <ul class="p-0">
+        <li class="media">
+          <img src="{{picture}}" alt="" class="logo mr-3">
+          <div class="media-body">
+
+            <small class="blue-text font-weight-bold m-0 d-block">{{name}}</small>
+
+
+            <small class="text-muted">{{date}}</small>
+            <div class="form-group m-0">
+              <button class="btn btn-primary btn-sm m-0" data-toggle="modal" data-target="#modalSongs">Ver Top</button>
+            </div>
+
+          </div>
+        </li>
+      </ul>
+    </div>
+
+   
+    
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalSongs" tabindex="-1" role="dialog" aria-labelledby="modalSongs" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title h5" id="exampleModalLabel"><i>5 Fav</i> <i class="ml-3 fas fa-smile-wink"></i></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <ul class="p-0">
+              {{#each songs}}
+              <li class="media mb-1">
+                <i class="fas fa-headphones mr-3 lnzero"></i>
+                <div class="media-body">
+                  <small>
+                    {{this}}
+                  </small>
+                </div>
+              </li>
+              {{/each}}
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {{/each}}
+
+
+
+  </div>
+
+
+</section>

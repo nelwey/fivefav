@@ -1,0 +1,75 @@
+<div class="hero-image">
+  <div class="hero-text">
+
+    <div class="row m-0" id="divPost">
+      <div class="col">
+        <div class="form-group">
+          <h1 class="h1">Inicia Sesión con Fb para poder hacer un post</h1>
+        </div>
+        <div class="form-group">
+          <small>(Mark zukaritas roba tus datos, yo no ;)</small>
+        </div>
+        <div class="form-group">
+          <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+          </fb:login-button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row m-0" id="FormularioPost">
+      <div class="col-12 col-md-6 col-xl-4 mx-auto">
+        <form class="text-center border bg-white p-1 p-sm-5 z-depth-3" action="/post/add" method="POST">
+          <h4 class="h4 mb-4 blue-text"><i>MIS 5 FAV</i></h4>
+
+          <ul class="p-0">
+            <li class="media mb-2">
+              1: <i class="fas fa-music green-text lnzero mr-3"></i>
+              <div class="media-body">
+                <input type="text" name="song1" class="form-control form-control-sm"
+                  placeholder="esa que dice nananana...." required>
+              </div>
+            </li>
+            <li class="media mb-2">
+              2: <i class="fas fa-music green-text lnzero mr-3"></i>
+              <div class="media-body">
+                <input type="text" name="song2" class="form-control form-control-sm" required>
+              </div>
+            </li>
+            <li class="media mb-2">
+              3: <i class="fas fa-music green-text lnzero mr-3"></i>
+              <div class="media-body">
+                <input type="text" name="song3" class="form-control form-control-sm" required>
+              </div>
+            </li>
+            <li class="media mb-2">
+              4: <i class="fas fa-music green-text lnzero mr-3"></i>
+              <div class="media-body">
+                <input type="text" name="song4" class="form-control form-control-sm" required>
+              </div>
+            </li>
+            <li class="media mb-2 ">
+              5: <i class="fas fa-music green-text lnzero mr-3"></i>
+              <div class="media-body">
+                <input type="text" name="song5" class="form-control form-control-sm" required>
+              </div>
+            </li>
+          </ul>
+
+          <input type="hidden" id="name" name="name">
+          <input type="hidden" id="email" name="email">
+          <input type="hidden" id="picture" name="picture">
+          <input type="hidden" id="date" name="date">
+
+          <button type="submit" class="btn btn-primary btn-block white-text">Publicar</button>
+        </form>
+
+
+      </div>
+    </div>
+
+
+
+  </div>
+</div>
+
+{{> footer}}
