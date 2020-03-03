@@ -24,6 +24,26 @@ indexCtrl.createPost = async (req, res, next) => {
   } = req.body;
   console.log(req.body);
 
+  if(song1 == song2 || song1 == song3 || song1 == song4 || song1 == song5){
+    req.flash('error_msg', 'No se puede enviar dos o más canciones con el mismo nombre');
+    return res.redirect('/post');
+  }
+  if(song2 == song1 || song2 == song3 || song2 == song4 || song2 == song5){
+    req.flash('error_msg', 'No se puede enviar dos o más canciones con el mismo nombre');
+    return res.redirect('/post');
+  }
+  if(song3 == song1 || song3 == song2 || song3 == song4 || song3 == song5){
+    req.flash('error_msg', 'No se puede enviar dos o más canciones con el mismo nombre');
+    return res.redirect('/post');
+  }
+  if(song4 == song1 || song4 == song2 || song4 == song3 || song4 == song5){
+    req.flash('error_msg', 'No se puede enviar dos o más canciones con el mismo nombre');
+    return res.redirect('/post');
+  }
+  if(song5 == song1 || song5 == song2 || song5 == song4 || song5 == song4){
+    req.flash('error_msg', 'No se puede enviar dos o más canciones con el mismo nombre');
+    return res.redirect('/post');
+  }
 
   const newPost = new Post({
     song1,
@@ -44,7 +64,7 @@ indexCtrl.createPost = async (req, res, next) => {
     if (postCreated) {
       console.log('Post creado');
       req.flash('success_msg', 'Publicacion creada correctamente!');
-      res.redirect('/posts');
+      return res.redirect('/posts');
     } else {
       console.log('Error al crear la publicación');
     }
