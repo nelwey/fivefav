@@ -8,15 +8,7 @@
 
   <div class="row m-0 px-3 p-md-0">
 
-    <div class="col-12 col-md-11 col-xl-12 rounded blue-text mx-auto text-center bg-light z-depth-1">
-      <h3 class="h3">Las 5 favoritas de todo el mundo <i class="fas fa-play"></i></h3>
-      <small class="text-muted">(de todos los que publicaron ajaj)</small>
-    </div>
-
-
     {{#each posts}}
-
-
     <div class="col-12 col-sm-5 col-md-3 col-xl-2 mx-auto bg-white p-2 my-3 rounded z-depth-1">
       <ul class="p-0">
         <li class="media">
@@ -28,53 +20,73 @@
 
             <small class="text-muted">{{date}}</small>
             <div class="form-group m-0">
-              <button class="btn btn-primary btn-sm m-0" data-toggle="modal" data-target="#modalSongs">Ver Top</button>
+              <button class="btn btn-primary btn-sm m-0" data-toggle="modal" data-target="#modalSongs">Ver Top
+                5</button>
+              <!-- Modal -->
+              <div class="modal fade" id="modalSongs" tabindex="-1" role="dialog" aria-labelledby="modalSongs"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title h5" id="exampleModalLabel"><i>5 Favoritas</i> <i
+                          class="ml-3 fas fa-smile-wink"></i></h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <ul class="p-0">
+
+                        <li class="media mb-1 p-2 bg-light dark-text">
+                          <i class="fas fa-music mr-3 lnzero"></i>
+                          <div class="media-body">
+                            <small>{{song1}}</small>
+                          </div>
+                        </li>
+
+                        <li class="media mb-1 p-2 bg-light dark-text">
+                          <i class="fas fa-music mr-3 lnzero"></i>
+                          <div class="media-body">
+                            <small>{{song2}}</small>
+                          </div>
+                        </li>
+
+                        <li class="media mb-1 p-2 bg-light dark-text">
+                          <i class="fas fa-music mr-3 lnzero"></i>
+                          <div class="media-body">
+                            <small>{{song3}}</small>
+                          </div>
+                        </li>
+
+                        <li class="media mb-1 p-2 bg-light dark-text">
+                          <i class="fas fa-music mr-3 lnzero"></i>
+                          <div class="media-body">
+                            <small>{{song4}}</small>
+                          </div>
+                        </li>
+
+                        <li class="media mb-1 p-2 bg-light dark-text">
+                          <i class="fas fa-music mr-3 lnzero"></i>
+                          <div class="media-body">
+                            <small>{{song5}}</small>
+                          </div>
+                        </li>
+
+                      </ul>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-success btn-sm" data-dismiss="modal">Cerrar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
           </div>
         </li>
       </ul>
     </div>
-
-   
-    
-
-
-
-    <!-- Modal -->
-    <div class="modal fade" id="modalSongs" tabindex="-1" role="dialog" aria-labelledby="modalSongs" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title h5" id="exampleModalLabel"><i>5 Fav</i> <i class="ml-3 fas fa-smile-wink"></i></h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <ul class="p-0">
-              {{#each songs}}
-              <li class="media mb-1 p-2 bg-light dark-text">
-                <i class="fas fa-music mr-3 lnzero"></i>
-                <div class="media-body">
-                  <small>
-                    {{this}}
-                  </small>
-                </div>
-              </li>
-              {{/each}}
-            </ul>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
     {{/each}}
-
-
 
   </div>
 
