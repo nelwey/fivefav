@@ -18,42 +18,72 @@
 
     <div class="row m-0" id="FormularioPost">
       <div class="col-12 col-md-6 col-xl-4 mx-auto">
-        <form class="text-center border bg-white p-1 p-sm-5 z-depth-3" action="/post/add" method="POST">
-          <h4 class="h4 mb-4 blue-text"><i>MIS 5 FAV</i></h4>
+        <button class="btn btn-success white-text" data-toggle="modal" data-target="#modalPost">Publicar</button>
 
+      </div>
+    </div>
+
+
+
+
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="modalPost" tabindex="-1" role="dialog" aria-labelledby="modalPost" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title h5" id="exampleModalLabel"><i>Tus cinco canciones favoritas</i> <i class="ml-3 fas fa-smile-wink"></i></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="text-center" action="/post/add" method="POST">
           <ul class="p-0">
-            <li class="media mb-2">
-              1: <i class="fas fa-music green-text lnzero mr-3"></i>
+
+            <li class="media mb-3">
+              <i class="icon-music_note lnzero bg-success white-text mr-3 px-1 rounded-circle"></i>
               <div class="media-body">
-                <input type="text" name="song1" class="form-control form-control-sm"
-                  placeholder="esa que dice nananana...." required>
+                <input type="text" name="song1" class="form-control form-control-sm" placeholder="Cancion 1" required>
               </div>
             </li>
-            <li class="media mb-2">
-              2: <i class="fas fa-music green-text lnzero mr-3"></i>
+
+            <li class="media mb-3">
+              <i class="icon-music_note lnzero bg-success white-text mr-3 px-1 rounded-circle"></i>
               <div class="media-body">
-                <input type="text" name="song2" class="form-control form-control-sm" required>
+                <input type="text" name="song2" class="form-control form-control-sm" placeholder="Cancion 2" required>
               </div>
             </li>
-            <li class="media mb-2">
-              3: <i class="fas fa-music green-text lnzero mr-3"></i>
+
+            <li class="media mb-3">
+              <i class="icon-music_note lnzero bg-success white-text mr-3 px-1 rounded-circle"></i>
               <div class="media-body">
-                <input type="text" name="song3" class="form-control form-control-sm" required>
+                <input type="text" name="song3" class="form-control form-control-sm" placeholder="Cancion 3" required>
               </div>
             </li>
-            <li class="media mb-2">
-              4: <i class="fas fa-music green-text lnzero mr-3"></i>
+
+            <li class="media mb-3">
+              <i class="icon-music_note lnzero bg-success white-text mr-3 px-1 rounded-circle"></i>
               <div class="media-body">
-                <input type="text" name="song4" class="form-control form-control-sm" required>
+                <input type="text" name="song4" class="form-control form-control-sm" placeholder="Cancion 4" required>
               </div>
             </li>
-            <li class="media mb-2 ">
-              5: <i class="fas fa-music green-text lnzero mr-3"></i>
+
+            <li class="media mb-3">
+              <i class="icon-music_note lnzero bg-success white-text mr-3 px-1 rounded-circle"></i>
               <div class="media-body">
-                <input type="text" name="song5" class="form-control form-control-sm" required>
+                <input type="text" name="song5" class="form-control form-control-sm" placeholder="Cancion 5" required>
               </div>
             </li>
+
+
           </ul>
+
+
+
+
+
 
           <input type="hidden" id="name" name="name">
           <input type="hidden" id="email" name="email">
@@ -62,14 +92,9 @@
 
           <button type="submit" class="btn btn-primary btn-block white-text">Publicar</button>
         </form>
-
-
       </div>
     </div>
-
-
-
   </div>
-</div>
 
-{{> footer}}
+
+  {{> footer}}

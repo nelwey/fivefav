@@ -8,9 +8,9 @@
 
   <div class="row m-0 px-3 p-md-0">
 
-    <div class="col-12 col-md-11 col-xl-12 rounded white-text mx-auto text-center bg-success z-depth-1">
+    <div class="col-12 col-md-11 col-xl-12 rounded blue-text mx-auto text-center bg-light z-depth-1">
       <h3 class="h3">Las 5 favoritas de todo el mundo <i class="fas fa-play"></i></h3>
-      <small>(de todos los que publicaron ajaj)</small>
+      <small class="text-muted">(de todos los que publicaron ajaj)</small>
     </div>
 
 
@@ -54,8 +54,8 @@
           <div class="modal-body">
             <ul class="p-0">
               {{#each songs}}
-              <li class="media mb-1">
-                <i class="fas fa-headphones mr-3 lnzero"></i>
+              <li class="media mb-1 p-2 bg-light dark-text">
+                <i class="fas fa-music mr-3 lnzero"></i>
                 <div class="media-body">
                   <small>
                     {{this}}
