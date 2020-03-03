@@ -16,70 +16,48 @@
           <div class="media-body">
 
             <small class="blue-text font-weight-bold m-0 d-block">{{name}}</small>
-
-
             <small class="text-muted">{{date}}</small>
+
             <div class="form-group m-0">
-              <button class="btn btn-primary btn-sm m-0" data-toggle="modal" data-target="#modalSongs">Ver Top
-                5</button>
-              <!-- Modal -->
-              <div class="modal fade" id="modalSongs" tabindex="-1" role="dialog" aria-labelledby="modalSongs"
-                aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title h5" id="exampleModalLabel"><i>5 Favoritas</i> <i
-                          class="ml-3 fas fa-smile-wink"></i></h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      <ul class="p-0">
-
-                        <li class="media mb-1 p-2 bg-light dark-text">
-                          <i class="fas fa-music mr-3 lnzero"></i>
-                          <div class="media-body">
-                            <small>{{song1}}</small>
-                          </div>
-                        </li>
-
-                        <li class="media mb-1 p-2 bg-light dark-text">
-                          <i class="fas fa-music mr-3 lnzero"></i>
-                          <div class="media-body">
-                            <small>{{song2}}</small>
-                          </div>
-                        </li>
-
-                        <li class="media mb-1 p-2 bg-light dark-text">
-                          <i class="fas fa-music mr-3 lnzero"></i>
-                          <div class="media-body">
-                            <small>{{song3}}</small>
-                          </div>
-                        </li>
-
-                        <li class="media mb-1 p-2 bg-light dark-text">
-                          <i class="fas fa-music mr-3 lnzero"></i>
-                          <div class="media-body">
-                            <small>{{song4}}</small>
-                          </div>
-                        </li>
-
-                        <li class="media mb-1 p-2 bg-light dark-text">
-                          <i class="fas fa-music mr-3 lnzero"></i>
-                          <div class="media-body">
-                            <small>{{song5}}</small>
-                          </div>
-                        </li>
-
-                      </ul>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-success btn-sm" data-dismiss="modal">Cerrar</button>
-                    </div>
+              <ul class="list-unstyled">
+                
+                <li class="media  light-blue darken-3 mb-1 white-text font-weight-bold rounded">
+                  <small><i class="icon-music_note mr-3 lnzero">1:</i></small>
+                  <div class="media">
+                    <small>{{song1}}</small>
                   </div>
-                </div>
-              </div>
+                </li>
+
+                 <li class="media  light-blue darken-3 mb-1 white-text font-weight-bold rounded">
+                  <small><i class="icon-music_note mr-3 lnzero">2:</i></small>
+                  <div class="media">
+                    <small>{{song2}}</small>
+                  </div>
+                </li>
+
+                 <li class="media  light-blue darken-3 mb-1 white-text font-weight-bold rounded">
+                  <small><i class="icon-music_note mr-3 lnzero">3:</i></small>
+                  <div class="media">
+                    <small class="">{{song3}}</small>
+                  </div>
+                </li>
+
+                 <li class="media  light-blue darken-3 mb-1 white-text font-weight-bold rounded">
+                  <small><i class="icon-music_note mr-3 lnzero">4:</i></small>
+                  <div class="media">
+                    <small>{{song4}}</small>
+                  </div>
+                </li>
+
+                 <li class="media  light-blue darken-3 mb-1 white-text font-weight-bold rounded">
+                  <small><i class="icon-music_note mr-3 lnzero">5:</i></small>
+                  <div class="media">
+                    <small>{{song5}}</small>
+                  </div>
+                </li>
+
+              </ul>
+
             </div>
 
           </div>
