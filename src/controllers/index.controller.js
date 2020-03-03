@@ -61,12 +61,15 @@ indexCtrl.createPost = async (req, res, next) => {
 
   if (!fbEmail) {
     const postCreated = await newPost.save();
+
     if (postCreated) {
       console.log('Post creado');
       req.flash('success_msg', 'Publicacion creada correctamente!');
       return res.redirect('/posts');
     } else {
       console.log('Error al crear la publicación');
+      req.flash('error_msg', 'Error al publicar, verifica las canciones ingresadas por favor!');
+      return res.redirect('/post');
     }
 
   }else{
