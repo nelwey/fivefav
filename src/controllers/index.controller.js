@@ -61,11 +61,11 @@ indexCtrl.createPost = async (req, res, next) => {
 
   if (postCreated) {
     console.log('Post creado');
-    req.flash('success_msg', 'Yei, gracias por publicar!');
+    req.flash('success_msg', 'Hey! Gracias por publicar ;)');
     return res.redirect('/posts');
   } else {
     console.log('Error al crear la publicación');
-    req.flash('error_msg', 'Error al publicar, verifica las canciones ingresadas por favor!');
+    req.flash('error_msg', 'Error al publicar, verifica las canciones ingresadas por favor.');
     return res.redirect('/post');
   }
 
