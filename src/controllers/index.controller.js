@@ -72,9 +72,6 @@ indexCtrl.createPost = async (req, res, next) => {
 }
 
 
-
-
-
 indexCtrl.renderPosts = async (req, res, next) => {
 
   const posts = await Post.find().sort({
